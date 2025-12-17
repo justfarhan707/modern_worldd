@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern World | Marketing & sales Website in Vashi Navi Mumbai</title>
+    <meta name="description" content="Modern World is a Digital Marketing, Modern Trade & General Trade sales company in Navi Mumbai offering CSD, CPC, Naval Canteen, Institutional Sales & IT solutions across PAN India."> 
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Modern World",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vashi",
+    "addressRegion": "Navi Mumbai",
+    "addressCountry": "IN"
+  },
+  "areaServed": "IN",
+  "description": "Digital Marketing, Modern Trade, General Trade, CSD, CPC and Sales Consultancy Company",
+  "telephone": "+91-9881639845",
+  "url": "https://modernworldindia.in"
+}
+</script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+     <link rel="stylesheet" href="./css/particles.css">
+    <style>
+        :root {
+            --color-primary-green: #059669; /* Emerald 600 */
+            --color-secondary-brown: rgba(72, 72, 69, 1); /* Stone 800 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffffff; /* Light Gray background */
+        }
+        /* Custom scroll behavior for smooth scrolling on link clicks */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for aesthetics */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: var(--color-primary-green);
+            border-radius: 10px;
+        }
+
+        /* Tailwind colors assumed configured externally */
+
+/* Scroll link hover */
+.scroll-link:hover {
+  color: #059669; /* Tailwind primary color */
+}
+
+/* Button hover */
+.btn:hover {
+  background-color: #16a34a; /* Tailwind emerald-600 */
+}
+
+/* Mobile drawer */
+#mobileDrawer {
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Dark mode handled by Tailwind dark: classes */
+
+        /* Custom styling for section headers */
+        .section-heading {
+            border-left: 6px solid var(--color-primary-green);
+            padding-left: 1rem;
+            display: inline-block;
+        }
+        /* Main layout */
+#contact-section {
+    padding: 50px;
+    background: rgba(196, 196, 187, 1);
+    font-family: Arial, sans-serif;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.contact-subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Contact Form */
+.contact-form {
+    width: 50%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    width: 100%;
+    background: #00a36c;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #008b5c;
+}
+
+/* Map Section */
+.contact-map {
+    width: 50%;
+    height: 200%;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    .contact-form, .contact-map {
+        width: 100%;
+    }
+}
+
+/* Logo card */
+.logo-card {
+  min-width: 200px;
+  height: 120px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-card img {
+  max-height: 100px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+
+
+/* Continuous carousel styles */
+    #clients { padding: 4rem 1rem; }
+    #clients .overflow-hidden { position: relative; }
+
+    /*
+      The slider track will be converted into a continuous marquee:
+      - It will contain two copies of the slides side-by-side.
+      - CSS animation shifts the track left by 50% (one copy width).
+    */
+    #slider.continuous {
+      display: flex;
+      width: max-content; /* tracks content width */
+      animation-name: marquee;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-duration: var(--marquee-duration, 20s); /* set by JS based on viewport */
+      will-change: transform;
+    }
+
+    /* Pause on hover / focus within parent viewport */
+    .overflow-hidden:hover #slider.continuous,
+    .overflow-hidden:focus-within #slider.continuous {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); } /* move left by one copy */
+    }
+
+    /* Ensure inner slides keep your layout */
+    #slider .min-w-full { flex: 0 0 100%; box-sizing: border-box; }
+
+    /* small visual tweak so there is no gap between copies */
+    #slider .min-w-full > * { box-sizing: border-box; }
+
+    /* Keep your card visuals */
+    .client-card {
+      padding: 1.5rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom-width: 4px;
+    }
+
+    /* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 62px;
+  height: 62px;
+  background: #059669; /* emerald */
+  border-radius: 50%;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float img {
+  width: 36px;
+  height: 36px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.45);
+}
+
+    </style>
+</head>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/919881639845" 
+   class="whatsapp-float" 
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<body class="text-stone-800">
+    <div id="particles-bg"></div>
+
+   
+
+
+    <!-- Navbar -->
+   <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/60 dark:bg-gray-900/60 shadow-sm">
+  <div class="container mx-auto flex items-center justify-between p-4">
+    <a href="#hero" class="flex items-center gap-2 font-bold text-primary">
+      <img src="./img/modernworld.jpg" alt="logo" class="w-19 h-12 rounded">
+      <div class="text-xs text-gray-500 dark:text-gray-400">Sales • Marketing • Web Dev</div>
+    </a>
+
+    <div class="hidden md:flex items-center gap-3">
+      <a href="#profile" class="scroll-link hover:text-primary transition">Profile</a>
+      <a href="#about" class="scroll-link hover:text-primary transition">About</a>
+      <a href="#services" class="scroll-link hover:text-primary transition">Services</a>
+      <a href="#expertise" class="scroll-link hover:text-primary transition">Expertise</a>
+      <a href="#contact-section" class="btn bg-primary text-white px-4 py-2 rounded hover:bg-emerald-600 transition">Contact</a>
+    </div>
+
+    <button id="mobileBtn" class="md:hidden p-2 rounded bg-gray-200 dark:bg-gray-700">☰</button>
+  </div>
+
+  <div id="mobileDrawer" class="md:hidden hidden bg-white dark:bg-gray-800 p-4 space-y-2">
+    <a href="#profile" class="scroll-link p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 block">Profile</a>
+    <a href="#about" class="scroll-link p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 block">About</a>
+    <a href="#services" class="scroll-link p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 block">Services</a>
+    <a href="#expertise" class="scroll-link p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 block">Expertise</a>
+    <a href="#team" class="scroll-link p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 block">Team</a>
+    <a href="#contact-section" class="scroll-link p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 block">Contact</a>
+  </div>
+</nav>
+
+       
+<!-- HERO OUTSIDE MAIN -->
+<section id="hero" class="relative min-h-[calc(100vh-64px)] flex items-center overflow-hidden">
+
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+        <source src="./img/video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/40"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 p-8 w-full">
+        <div class="lg:w-1/2">
+            <h1 class="text-5xl font-extrabold text-white mb-4 leading-tight">
+                Powering <span class="text-emerald-400">Growth</span> through Strategic Excellence.
+            </h1>
+
+            <p class="text-xl text-gray-200 mb-8">
+                A growing Sales & Marketing, and innovative Web Development company committed to transforming human values into market success.
+            </p>
+
+            <div class="flex gap-4">
+                <a href="#services"
+                   class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-xl text-lg shadow-lg shadow-emerald-200 transition duration-300">
+                    Explore Services
+                </a>
+
+                <a href="#contact-section"
+                   class="bg-transparent border-2 border-emerald-400 text-emerald-400 hover:bg-white/10 font-bold py-3 px-8 rounded-xl text-lg transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!--section abour modern world-->
+
+        <!-- New Section: Who We Are / Introduction -->
+<section id="intro" class="py-16 mb-16 rounded-3xl bg-white shadow-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-8">
+
+        <!-- LEFT IMAGE -->
+        <img src="./img/modernworldimg.jpeg" 
+             alt="About Modern World" 
+             class="w-full h-[380px] md:h-[420px] lg:h-[460px] object-cover rounded-2xl shadow-xl">
+
+        <!-- RIGHT TEXT -->
+        <div>
+            <h2 class="text-4xl font-bold text-stone-800 section-heading mb-6">
+                Who We Are
+            </h2>
+
+            <p class="text-lg text-stone-700 leading-relaxed mb-6">
+              We at Modern world are honest team with new startup of providing Marketing and sales consultancy services for PAN India Geography, The hard core experience of our team in related field
+               and our proven leadership experience in our professional carrier has motivated us to start Modern world.
+
+            </p>
+
+            <p class="text-lg text-stone-700 leading-relaxed mb-6">
+               Our Leadership Team believe in fundament clarity and being down to earth approach even we reach or touch highest peak of achievement. All the team member started with scratch in their respective carrier and has achieved a great position over a period of time in their professional carrier. 
+Understanding the basic need of Indian business that of Medium and Small Entrepreneur who want to grow and expand its business, overcoming constrain of cost effectiveness and geographical reach. 
+ 
+            </p>
+
+            <a href="#services" 
+               class="inline-block bg-emerald-600 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-emerald-700 transition">
+                Learn More
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+       
+        <section id="profile" class="py-16 bg-gray-50 rounded-3xl mb-16 shadow-lg">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-stone-800 section-heading">Organization Profile & Structure</h2>
+        <p class="text-lg text-stone-600 mt-2">The foundation of our dedication to excellence.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8">
+
+        <!-- Vision -->
+        <div class="bg-white p-5 rounded-2xl shadow-md border-t-4 border-emerald-500 hover:shadow-xl transition duration-300">
+            <h3 class="text-2xl font-bold text-emerald-600 mb-4">Vision</h3>
+
+            <ul class="space-y-3 text-stone-600">
+                <li class="flex items-start">
+                    <span class="text-emerald-600 text-xl font-bold mr-2">•</span>
+                    <p>We at Modern World have a vision of becoming one of the top marketing and sales support providers.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Mission -->
+        <div class="bg-white p-5 rounded-2xl shadow-md border-t-4 border-stone-700 hover:shadow-xl transition duration-300">
+            <h3 class="text-2xl font-bold text-stone-700 mb-4">Mission</h3>
+
+            <ul class="space-y-3 text-stone-600">
+                <li class="flex items-start">
+                    <span class="text-stone-700 text-xl font-bold mr-2">•</span>
+                    <p>To build a strong network of sales, marketing, village-level distributors, supply chain and logistic support for various industries and businesses.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Core Value -->
+        <div class="bg-white p-5 rounded-2xl shadow-md border-t-4 border-emerald-500 hover:shadow-xl transition duration-300">
+            <h3 class="text-2xl font-bold text-emerald-600 mb-4">Core Values</h3>
+
+            <ul class="space-y-3 text-stone-600">
+                <li class="flex items-start">
+                    <span class="text-emerald-600 text-xl font-bold mr-2">•</span>
+                    <p>INDEGENIOUSNESS – Indian preference first.</p>
+                </li>
+
+                <li class="flex items-start">
+                    <span class="text-emerald-600 text-xl font-bold mr-2">•</span>
+                    <p>SUPPORT – At every level of hierarchy and by everyone.</p>
+                </li>
+
+                <li class="flex items-start">
+                    <span class="text-emerald-600 text-xl font-bold mr-2">•</span>
+                    <p>INTEGRITY – Learning by acquiring knowledge in the right way from anyone.</p>
+                </li>
+
+                <li class="flex items-start">
+                    <span class="text-emerald-600 text-xl font-bold mr-2">•</span>
+                    <p>ALERTNESS – At all levels and at all times.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Quality & Policy -->
+        <div class="bg-white p-5 rounded-2xl shadow-md border-t-4 border-stone-700 hover:shadow-xl transition duration-300">
+            <h3 class="text-2xl font-bold text-stone-700 mb-4">Quality & Policy</h3>
+
+            <ul class="space-y-3 text-stone-600">
+                <li class="flex items-start">
+                    <span class="text-stone-700 text-xl font-bold mr-2">•</span>
+                    <p>Providing prudent, quality, and prompt services to clients.</p>
+                </li>
+
+                <li class="flex items-start">
+                    <span class="text-stone-700 text-xl font-bold mr-2">•</span>
+                    <p>Maximizing sales and profit volume for clients and the organization.</p>
+                </li>
+
+                <li class="flex items-start">
+                    <span class="text-stone-700 text-xl font-bold mr-2">•</span>
+                    <p>Continuous training and development at every organizational level.</p>
+                </li>
+
+                <li class="flex items-start">
+                    <span class="text-stone-700 text-xl font-bold mr-2">•</span>
+                    <p>Creating a positive aura in the business environment.</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+        <!-- 4. About the Organization -->
+        <section id="about" class="py-16 mb-16">
+            <h2 class="text-4xl font-bold text-stone-800 mb-8 section-heading">Purpose Of Organization</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- A, B, C -->
+                <div class="space-y-6">
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-l-4 border-emerald-500">
+                        <h3 class="text-xl font-semibold text-emerald-600">Service Orientation</h3>
+                        <p class="text-stone-600 mt-2">Profit Motive: maximizing client market presence and profitability.<br>
+                            <br>
+                                                     Emloyement Generation: creating sustainable job opportunities across regions.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-l-4 border-stone-700">
+                        <h3 class="text-xl font-semibold text-stone-800">Structure</h3>
+                        <p class="text-stone-600 mt-2">The organization is led by an experienced, dedicated, and honest leadership team.
+They are supported by a young, energetic operational team and a hardworking execution team that strengthens our grassroots presence and ensures a strong, reliable foundation for our clients</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg border-l-4 border-emerald-500">
+                        <h3 class="text-xl font-semibold text-emerald-600">Operations</h3>
+                        <p class="text-stone-600 mt-2">Starting its operations at National level and expanding it to International level, two way, local to global and global to local level 
+                            in India, we want to develop such operation Matrix for benefit of our clients.</p>
+                    </div>
+                </div>
+                <!-- D, E & Illustration -->
+                <div class="md:col-span-2 space-y-6">
+                    <div class="p-8 bg-stone-800 text-white rounded-xl shadow-xl">
+                        <h3 class="text-xl font-semibold mb-3">Function</h3>
+                        <p class="text-gray-300">
+                            We strongly believe in being organize at every micro level and establishing control mechanism process at necessary check level and monitor the operation to achieve the desired result, for objective set and analyzing the business with proper automated real time reporting system, by deep diving in to data for accurate interpretation and drawing
+                             conclusion for achieving the set goals, targets, framing strategies and for business expansion.
+                        </p>
+                    </div>
+                    <!-- Image 2: Abstract Service Pillars -->
+                    <img src="./img/corparate2.jpg"
+     class="w-full h-[420px] md:h-[500px] lg:h-[490px] object-cover rounded-2xl shadow-xl">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Our Services -->
+        <section id="services" class="py-16 bg-emerald-50 rounded-3xl mb-16 shadow-inner">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-stone-800 section-heading">Our Services</h2>
+                <p class="text-lg text-emerald-700 mt-2">Comprehensive solutions for every market segment.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 px-8">
+                <!-- Row 1: Core Functions -->
+                <div class="bg-white p-4 rounded-xl shadow-md text-center">
+                    <span class="text-2xl text-emerald-500 font-bold">Marketing</span>
+                    <p class="text-sm font-medium mt-1">Market Research & Certification
+                                                            New Product Development (NPD)
+                                                            Branding 
+                                                            Designing
+                                                            Packing 
+                                                            Packaging
+                                                            Promotion 
+                                                            Advertising
+
+</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md text-center">
+                    <span class="text-2xl text-emerald-500 font-bold">Sales</span>
+                    <p class="text-sm font-medium mt-1">-General Trade 
+                                C&FA Agent / Mother Depot Set up
+                                Super Stockiest structure 
+                                Distributor structure
+                                Retailer structure
+</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md text-center">
+                    <span class="text-2xl text-emerald-500 font-bold">Modern Trade</span>
+                    <p class="text-sm font-medium mt-1">E. Commerce (National and International)
+                                            Vendor Registration / Seller Registration
+                                            Brand Registration
+                                            Distribution structure 
+                                            Operation Handling 
+</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md text-center">
+                    <span class="text-2xl text-emerald-500 font-bold">Institutional Sales</span>
+                    <p class="text-sm font-medium mt-1">
+                        -HORECA 
+                        -Govt. and Emerging
+                        -Channels (Sales Operation Handling)
+                        CSD
+                        CPC
+                        Navel Canteen 
+
+                    </p>
+                </div>
+                <!-- Row 2: Trade Channels -->
+                <div class="bg-white p-4 rounded-xl shadow-md text-center md:col-span-2">
+                    <span class="text-2xl text-emerald-600 font-bold">Human Resource & Man Power(Pan India)</span>
+                    <p class="text-sm font-medium mt-1">
+                        -Recruitment & Staffing
+                        -Training & Development
+                        -Performance Management
+                        -Employee Engagement & Retention
+                        <br>
+                        Sales Team 
+                        Back End Team
+                        Promotion Team
+
+                    </p>
+                </div>
+                <!-- Row 3: Specialized Operations -->
+                <div class="bg-white p-4 rounded-xl shadow-md text-center md:col-span-4 lg:col-span-6">
+                    <span class="text-2xl text-emerald-500 font-bold">Warehousing, Logistic & Supply chain solution PAN India.</span>
+                    <p class="text-sm font-medium mt-1">
+                        Contracting with cost effective Transport
+                        Warehousing
+                        Handling Supply chain operation. 
+                        Ultimately arriving at logical cost effective solution.
+
+                    </p>
+                </div>
+
+                 <div class="bg-white p-4 rounded-xl shadow-md text-center md:col-span-4 lg:col-span-6">
+                    <span class="text-2xl text-emerald-500 font-bold">IT Solutions</span>
+                    <p class="text-sm font-medium mt-1">
+                        Web design, Development & Maintenance,
+                        Dynamic web application development,
+                        Top notch E-commerce solutions,
+                        Redesigning existing systems.
+                        
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Our System Client Base -->
+     <!-- 6. Our System Client Base (continuous carousel) -->
+  <section id="clients" class="py-16 mb-16 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-stone-800 mb-8 section-heading">Our System Client Base</h2>
+
+    <div class="overflow-hidden relative">
+
+    <!-- SLIDER TRACK -->
+    <div id="logo-slider" class="flex gap-8 animate-scroll">
+
+      <!-- LOGO CARD -->
+      <div class="logo-card">
+        <img src="./img/163.jpg" alt="Client Logo">
+      </div>
+
+      <div class="logo-card">
+        <img src="./img/164.jpg" alt="Client Logo">
+      </div>
+
+      <div class="logo-card">
+        <img src="./img/165.jpg" alt="Client Logo">
+      </div>
+
+      <div class="logo-card">
+        <img src="./img/166.jpg" alt="Client Logo">
+      </div>
+
+      <div class="logo-card">
+        <img src="./img/167.jpg" alt="Client Logo">
+      </div>
+
+      <div class="logo-card">
+        <img src="./img/168.jpg" alt="Client Logo">
+      </div>
+
+      <div class="logo-card">
+        <img src="./img/169.jpg" alt="Client Logo">
+      </div>
+
+      <div class="logo-card">
+        <img src="./img/170.jpg" alt="Client Logo">
+      </div>
+
+
+      <div class="logo-card">
+        <img src="./img/165.jpg" alt="Client Logo">
+      </div>
+
+      <div class="logo-card">
+        <img src="./img/166.jpg" alt="Client Logo">
+      </div>
+
+      <div class="logo-card">
+        <img src="./img/167.jpg" alt="Client Logo">
+      </div>
+
+      <div class="logo-card">
+        <img src="./img/168.jpg" alt="Client Logo">
+      </div>
+
+      <div class="logo-card">
+        <img src="./img/169.jpg" alt="Client Logo">
+      </div>
+
+    </div>
+  </div>
+
+  </section>
+
+
+
+        <!-- 7. Marketing & 8. Our Expertise -->
+        <section id="expertise" class="py-16 bg-white rounded-3xl mb-16 shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 px-8">
+                <!-- 7. Marketing Activities -->
+                <div>
+                    <h2 class="text-4xl font-bold text-stone-800 mb-8 section-heading">Marketing Activities</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-emerald-500 font-bold text-xl mr-3">&bullet;</span>
+                            <div>
+                                <h3 class="font-semibold text-xl text-stone-800">Product Launching</h3>
+                                <p class="text-stone-600">Strategic planning and execution for impactful market entry.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-500 font-bold text-xl mr-3">&bullet;</span>
+                            <div>
+                                <h3 class="font-semibold text-xl text-stone-800">Product Promotional Activities</h3>
+                                <p class="text-stone-600">Innovative campaigns driving immediate sales and sustained brand awareness.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-500 font-bold text-xl mr-3">&bullet;</span>
+                            <div>
+                                <h3 class="font-semibold text-xl text-stone-800">Design & Development</h3>
+                                <p class="text-stone-600">From concept design to final product development, ensuring market fit.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-500 font-bold text-xl mr-3">&bullet;</span>
+                            <div>
+                                <h3 class="font-semibold text-xl text-stone-800">Branding & Visibility</h3>
+                                <p class="text-stone-600">Creating strong, memorable brand identities and maximizing shelf presence.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-500 font-bold text-xl mr-3">&bullet;</span>
+                            <div>
+                                <h3 class="font-semibold text-xl text-stone-800">Advertisement Printing & sPublicity</h3>
+                                <p class="text-stone-600">Coordinated digital and physical media strategies for maximum reach.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 8. Our Expertise -->
+                <div>
+                    <h2 class="text-4xl font-bold text-stone-800 mb-8 section-heading">Our Core Expertise</h2>
+                    <div class="space-y-8">
+                        
+                        <!-- A. Sales -->
+                        <div class="bg-emerald-50 p-6 rounded-xl shadow-inner border-l-4 border-emerald-600">
+                            <h3 class="text-2xl font-bold text-emerald-700 mb-3">A. Sales & Marketing, (GT, MT, Institution, E-COM)</h3>
+                            <div class="flex gap-4 text-stone-700">
+                                <p class="font-semibold">1. Front End (Field)</p>
+                                <span class="text-gray-400">|</span>
+                                <p class="font-semibold">2. Back End Support</p>
+                            </div>
+                        </div>
+
+                         <!-- B. Distribution Structure PAN India -->
+                        <div class="bg-emerald-50 p-6 rounded-xl shadow-inner border-l-4 border-emerald-600">
+                            <h3 class="text-2xl font-bold text-emerald-700 mb-3">B. PAN India Distribution</h3>
+                            <div class="flex flex-wrap gap-4 text-stone-700 font-medium">
+                                <span>CNF</span> &middot;
+                                <span>SS</span> &middot;
+                                <span>Distributors</span> &middot;
+                                <span>Retailers</span>
+                            </div>
+                        </div>
+
+                        <!-- C. MIS -->
+                        <div class="bg-stone-100 p-6 rounded-xl shadow-inner border-l-4 border-stone-700">
+                            <h3 class="text-2xl font-bold text-stone-800 mb-3">C. MIS & Analytics</h3>
+                            <ul class="list-disc list-inside space-y-1 text-stone-700 pl-4">
+                                <li>Data Presentation & Report Generation</li>
+                                <li>Deep Analysis for Strategic Decision-Making</li>
+                                <li>Development of Custom Tracking Systems</li>
+                            </ul>
+                        </div>
+
+    
+
+                        <!-- D. E-Commerce -->
+                        <div class="bg-stone-100 p-6 rounded-xl shadow-inner border-l-4 border-stone-700">
+                            <h3 class="text-2xl font-bold text-stone-800 mb-3">D. E-Commerce Management</h3>
+                            <div class="flex flex-wrap gap-4 text-stone-700 font-medium">
+                                <span>International</span> &middot;
+                                <span>National</span> &middot;
+                                <span>Regional</span> &middot;
+                                <span>Local</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+      <section id="contact-section">
+
+    <h2 class="contact-title">Contact Us</h2>
+    <p class="contact-subtitle">We’d love to hear from you. Send us a message!</p>
+
+    <div class="contact-wrapper">
+
+        <!-- LEFT: Contact Form (NOW FIXED WITH PROPER WRAPPER) -->
+        <div class="contact-form">
+            <form action="https://formsubmit.co/infos.modernworld@gmail.com" method="POST">
+
+                <!-- Hidden -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <label>Your Name</label>
+                <input type="text" name="name" required>
+
+                <label>Email Address</label>
+                <input type="email" name="email" required>
+
+                <label>Phone Number</label>
+                <input type="text" name="phone">
+
+                <label>Message</label>
+                <textarea name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+        </div>
+
+        <!-- RIGHT: Map -->
+        <div class="contact-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4827723167613!2d76.999!3d11.004556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDAwJzE2LjQiTiA3NsKwNTknNTYuMCJF!5e0!3m2!1sen!2sin!4v000000000"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+    </div>
+
+</section>
+
+
+    </main>
+
+    <footer class="bg-stone-900 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 Modern World. All rights reserved. | Sales, Marketing & Web Development</p>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+
+<script src="navbar.js">
+// Dark mode toggle
+const rootEl = document.documentElement;
+const darkToggle = document.getElementById('darkToggle');
+if (localStorage.getItem('theme') === 'dark') rootEl.classList.add('dark');
+
+darkToggle?.addEventListener('click', () => {
+  rootEl.classList.toggle('dark');
+  localStorage.setItem('theme', rootEl.classList.contains('dark') ? 'dark' : 'light');
+});
+
+// Mobile drawer toggle
+const mobileBtn = document.getElementById('mobileBtn');
+const mobileDrawer = document.getElementById('mobileDrawer');
+
+mobileBtn?.addEventListener('click', () => {
+  mobileDrawer.classList.toggle('hidden');
+});
+</script>
+
+
+<script>
+/* Carousel initialization (separate inline script) */
+(function () {
+  const slider = document.getElementById('slider');
+  const viewport = slider && slider.parentElement;
+  if (!slider || !viewport) {
+    console.warn('Carousel: #slider or its viewport not found');
+    return;
+  }
+
+  // Apply CSS class that has @keyframes marquee rules
+  slider.classList.add('continuous');
+
+  function ensureTwoCopies() {
+    const copies = slider.querySelectorAll('.min-w-full');
+    if (copies.length >= 2) return;
+    const first = copies[0];
+    if (!first) return;
+    const clone = first.cloneNode(true);
+    // hide clone content from assistive tech
+    clone.querySelectorAll('*').forEach(el => el.setAttribute('aria-hidden', 'true'));
+    slider.appendChild(clone);
+    console.debug('Carousel: appended clone');
+  }
+
+  const PX_PER_SECOND = 140;
+
+  function updateDuration() {
+    const copies = slider.querySelectorAll('.min-w-full');
+    if (!copies.length) return;
+    const slideWidth = copies[0].offsetWidth;
+    const duration = Math.max(6, Math.round(slideWidth / PX_PER_SECOND));
+    slider.style.setProperty('--marquee-duration', duration + 's');
+    console.debug('Carousel: set duration', duration + 's');
+  }
+
+  function refresh() {
+    // Remove extra copies (keep only the first copy), then ensure clone exists again
+    const copies = Array.from(slider.querySelectorAll('.min-w-full'));
+    if (copies.length > 1) copies.slice(1).forEach(n => n.remove());
+    ensureTwoCopies();
+    // force reflow
+    void slider.offsetWidth;
+    updateDuration();
+  }
+
+  // Pause/resume on tab visibility
+  document.addEventListener('visibilitychange', () => {
+    slider.style.animationPlayState = document.hidden ? 'paused' : '';
+  });
+
+  // Touch pause on mobile
+  viewport.addEventListener('touchstart', () => { slider.style.animationPlayState = 'paused'; }, { passive: true });
+  viewport.addEventListener('touchend',   () => { slider.style.animationPlayState = ''; }, { passive: true });
+
+  // Recompute on resize (debounced)
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(refresh, 120);
+  });
+
+  // Initialize immediately (script is at page end), and also listen to DOMContentLoaded as safety.
+  refresh();
+  document.addEventListener('DOMContentLoaded', refresh);
+
+  console.info('Carousel: initialization script loaded');
+})();
+</script>
+</script>
+<script>
+particlesJS('particles-bg', {
+  particles: {
+    number: { 
+      value: 210, 
+      density: { enable: true, value_area: 900 }
+    },
+    color: { value: "#ffffff" }, // White particles
+    shape: { type: "circle" },
+
+    opacity: {
+      value: 1,
+      random: false
+    },
+    size: {
+      value: 3.4,
+      random: true
+    },
+    move: {
+      speed: 2.2,
+      out_mode: "out"
+    },
+
+    // 🌟 Glow Effect
+    shadow: {
+      enable: true,
+      color: "#ffffff",
+      blur: 12  // Bigger blur = stronger glow
+    },
+
+    line_linked: {
+      enable: true,
+      distance: 140,
+      color: "#059669", // Emerald Lines
+      opacity: 0.85,
+      width: 1.6
+    }
+  },
+
+  interactivity: {
+    events: {
+      onhover: { enable: true, mode: "repulse" },
+      onclick: { enable: true, mode: "push" }
+    },
+    modes: {
+      repulse: { distance: 150, duration: 0.4 },
+      push: { quantity: 6 }
+    }
+  },
+
+  retina_detect: true
+});
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
